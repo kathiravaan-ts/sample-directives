@@ -5,8 +5,8 @@
   </div>
   <input type="text" [ngModel]="messsage" (ngModelChange)="setUppercaseName($event)" />
 
-  <div>
-    <p>Unordered list with ngFor Directive</p>
+  <div >
+    <p appHighlight>Unordered list with ngFor Directive</p>
     <ng-container *ngIf="false">
       <p>Valid Container</p>
       <span>Valid</span>
@@ -16,7 +16,7 @@
     </ul>
   </div>
 
-  <div style="margin-top: 15px;">
+  <div style="margin-top: 15px;" [appHighlight]="color">
     <div>
       <input type="text" [(ngModel)]="selectedAnimal"/>
       <button type="button" class="btnAdd" (click)="addAnimalToListItems($event);">Add</button>

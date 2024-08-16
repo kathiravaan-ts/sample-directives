@@ -1,11 +1,12 @@
 import { CommonModule, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component, Input, input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from '../../directives/highlight.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgClass, NgStyle, FormsModule, NgIf, NgFor],
+  imports: [NgClass, NgStyle, FormsModule, NgIf, NgFor, HighlightDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -15,6 +16,7 @@ export class HomeComponent  implements OnInit{
   isDanger: boolean = true;
   currentClasses : Record<string, boolean> = {};
   currentStyles : Record<string, string> = {};
+  color:string = 'green';
 
   items: string[] = ['kathir','nivetha','athiyan']
   animals: string[] = ['dog','cat','lion'];
