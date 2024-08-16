@@ -1,0 +1,28 @@
+<div>
+  <p>Home works!</p>
+  <input type="text" [value]="messsage" />
+  <div [ngStyle]="currentStyles" [ngClass]="currentClasses" class="divDanger" *ngIf="true">
+  </div>
+  <input type="text" [ngModel]="messsage" (ngModelChange)="setUppercaseName($event)" />
+
+  <div>
+    <p>Unordered list with ngFor Directive</p>
+    <ng-container *ngIf="false">
+      <p>Valid Container</p>
+      <span>Valid</span>
+    </ng-container>
+    <ul>
+      <li *ngFor="let item of items; let i = index"> {{i}} - {{item}}</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 15px;">
+    <div>
+      <input type="text" [(ngModel)]="selectedAnimal"/>
+      <button type="button" class="btnAdd" (click)="addAnimalToListItems($event);">Add</button>
+    </div>
+    <div *ngFor="let aml of animals; trackBy : trackByItems">
+      {{aml}}
+    </div>
+  </div>
+</div>
